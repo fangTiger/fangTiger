@@ -14,7 +14,9 @@ EXPECTED_ASSETS = {
     "assets/captain-mark.svg",
     "assets/card-arcpredict.svg",
     "assets/card-captain-dock.svg",
+    "assets/card-llm-template.svg",
     "assets/card-predictarena.svg",
+    "assets/card-web-demo.svg",
 }
 
 REQUIRED_README_TEXT = [
@@ -26,6 +28,10 @@ REQUIRED_README_TEXT = [
     "Arc Builder",
     "Hong Kong",
     "https://www.captain-dock.xyz/",
+    "FRONTEND WEBSITE",
+    "web_demo",
+    "Large Model Template",
+    "Agent prompt, tool-call and workflow templates for reusable AI systems.",
     "https://www.linkedin.com/in/lao-shugen-0aa058349/",
     "https://x.com/mycndota",
 ]
@@ -34,6 +40,8 @@ REQUIRED_REPOSITORIES = {
     "ArcPredict": "https://github.com/fangTiger/ArcPredict",
     "captain-dock": "https://github.com/fangTiger/captain-dock",
     "PredictArena": "https://github.com/fangTiger/PredictArena",
+    "web_demo": "https://github.com/fangTiger/web_demo",
+    "Large Model Template": "#large-model-template",
 }
 
 FORBIDDEN_README_TOKENS = [
@@ -74,6 +82,8 @@ class ProfileReadmeTest(unittest.TestCase):
         self.assertIn("assets/banner-dark.svg", markdown)
         self.assertIn("assets/banner-light.svg", markdown)
         self.assertIn("Personal command deck for AI × Web3 projects.", markdown)
+        self.assertIn("assets/card-web-demo.svg", markdown)
+        self.assertIn("assets/card-llm-template.svg", markdown)
 
     def test_readme_uses_local_assets_without_dynamic_badges(self):
         self.assertTrue(README.exists(), "README.md should exist")

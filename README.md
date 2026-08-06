@@ -32,6 +32,17 @@ Building practical AI × Web3 systems with a control-deck mindset: focused agent
   </a>
 </div>
 
+<br>
+
+<div align="center">
+  <a href="https://github.com/fangTiger/web_demo">
+    <img src="assets/card-web-demo.svg" alt="web_demo" width="46%">
+  </a>
+  <a href="#large-model-template">
+    <img src="assets/card-llm-template.svg" alt="Large Model Template" width="46%">
+  </a>
+</div>
+
 ### IDENTITY
 
 Winner, Binance AI Competition · Arc Builder · Hong Kong
@@ -47,3 +58,13 @@ X: <a href="https://x.com/mycndota">@mycndota</a>
 | [ArcPredict](https://github.com/fangTiger/ArcPredict) | Prediction intelligence and agent-driven market research. |
 | [captain-dock](https://github.com/fangTiger/captain-dock) | Personal command deck for AI × Web3 projects. |
 | [PredictArena](https://github.com/fangTiger/PredictArena) | Forecasting experiments and prediction-system workflows. |
+| [web_demo](https://github.com/fangTiger/web_demo) | FRONTEND WEBSITE experiments for shipping polished AI × Web3 interfaces. |
+| [Large Model Template](#large-model-template) | Agent prompt, tool-call and workflow templates for reusable AI systems. |
+
+### FRONTEND WEBSITE
+
+`web_demo` collects frontend website experiments for turning AI × Web3 systems into polished, inspectable product surfaces.
+
+### Large Model Template
+
+Agent prompt, tool-call and workflow templates for reusable AI systems.

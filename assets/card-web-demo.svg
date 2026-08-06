@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 760 300">
+  <title>web_demo project card</title>
+  <desc>Project card for web_demo, described as frontend website experiments for polished AI Web3 interfaces.</desc>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .sans { font-family: Inter, Arial, Helvetica, sans-serif; }
+    .pulse { animation: pulse 4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+  </style>
+  <defs>
+    <linearGradient id="cardWebDemo" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0B0F14"/>
+      <stop offset=".7" stop-color="#141C24"/>
+      <stop offset="1" stop-color="#1A2028"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="744" height="284" rx="8" fill="url(#cardWebDemo)" stroke="#2A3542" stroke-width="2"/>
+  <path d="M32 62H728M32 238H728" stroke="#2A3542" stroke-width="1"/>
+  <g transform="translate(480 72)">
+    <rect x="0" y="0" width="210" height="142" rx="8" fill="#101820" stroke="#334252" stroke-width="2"/>
+    <path d="M0 34H210" stroke="#334252" stroke-width="2"/>
+    <circle cx="22" cy="17" r="5" fill="#FF7A18"/>
+    <circle cx="42" cy="17" r="5" fill="#66E3FF"/>
+    <circle cx="62" cy="17" r="5" fill="#C4D4DF"/>
+    <rect x="22" y="58" width="78" height="50" rx="5" fill="#0B0F14" stroke="#2A3542"/>
+    <path class="pulse" d="M120 60H178M120 82H166M120 104H188" stroke="#66E3FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M38 94L60 72L82 94" fill="none" stroke="#FF7A18" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text class="mono" x="42" y="48" fill="#FF7A18" font-size="18">FRONTEND WEBSITE</text>
+  <text class="sans" x="42" y="116" fill="#F4FBFF" font-size="46" font-weight="800">web_demo</text>
+  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">Polished AI × Web3</text>
+  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="24">interface experiments.</text>
+  <rect x="42" y="222" width="250" height="34" rx="4" fill="#101820" stroke="#334252"/>
+  <text class="mono" x="60" y="244" fill="#66E3FF" font-size="15">frontend · product · demos</text>
+</svg>
