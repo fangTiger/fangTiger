@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 760 300">
+  <title>ArcPredict project card</title>
+  <desc>Project card for ArcPredict, focused on prediction intelligence and agent-driven market research.</desc>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .sans { font-family: Inter, Arial, Helvetica, sans-serif; }
+    .pulse { animation: pulse 4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+  </style>
+  <defs>
+    <linearGradient id="cardArc" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0B0F14"/>
+      <stop offset=".7" stop-color="#141C24"/>
+      <stop offset="1" stop-color="#1A2028"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="744" height="284" rx="8" fill="url(#cardArc)" stroke="#2A3542" stroke-width="2"/>
+  <path d="M32 62H728M32 238H728" stroke="#2A3542" stroke-width="1"/>
+  <path d="M34 250L172 196L290 211L425 134L566 166L724 86" fill="none" stroke="#66E3FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M34 250L172 196L290 211L425 134L566 166L724 86" fill="none" stroke="#66E3FF" stroke-width="10" stroke-linecap="round" opacity=".1"/>
+  <circle class="pulse" cx="425" cy="134" r="10" fill="#FF7A18"/>
+  <circle cx="724" cy="86" r="8" fill="#66E3FF"/>
+  <text class="mono" x="42" y="48" fill="#FF7A18" font-size="18">CURRENT MISSION</text>
+  <text class="sans" x="42" y="116" fill="#F4FBFF" font-size="46" font-weight="800">ArcPredict</text>
+  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">Prediction intelligence and</text>
+  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="24">agent-driven market research.</text>
+  <rect x="42" y="222" width="230" height="34" rx="4" fill="#101820" stroke="#334252"/>
+  <text class="mono" x="60" y="244" fill="#66E3FF" font-size="15">signals · agents · markets</text>
+</svg>

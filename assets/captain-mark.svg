@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 240 240">
+  <title>Captain FangTiger geometric mark</title>
+  <desc>Reusable geometric tiger head, compass and orbit mark in graphite, ice blue and Arc orange.</desc>
+  <style>
+    .pulse { animation: pulse 3.6s ease-in-out infinite; }
+    .orbit { animation: orbit 10s linear infinite; transform-origin: 120px 120px; }
+    @keyframes pulse { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+  </style>
+  <circle cx="120" cy="120" r="108" fill="#0B0F14"/>
+  <circle cx="120" cy="120" r="92" fill="#101820" stroke="#2A3542" stroke-width="2"/>
+  <path d="M120 12V42M120 198V228M12 120H42M198 120H228" stroke="#66E3FF" stroke-width="4" stroke-linecap="round"/>
+  <g class="orbit">
+    <ellipse cx="120" cy="120" rx="105" ry="38" fill="none" stroke="#FF7A18" stroke-width="3" opacity=".8"/>
+    <circle cx="225" cy="120" r="5" fill="#66E3FF"/>
+  </g>
+  <path d="M62 70L87 30L120 65L153 30L178 70L165 151L120 210L75 151Z" fill="#F4FBFF" stroke="#0B0F14" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M87 80L120 56L153 80L144 142L120 174L96 142Z" fill="#FF7A18"/>
+  <path d="M82 110L38 98L70 135M158 110L202 98L170 135" fill="none" stroke="#66E3FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M96 112L76 105M144 112L164 105M101 139H139M112 154L120 174L128 154" fill="none" stroke="#0B0F14" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="pulse" d="M78 182L120 212L162 182" fill="none" stroke="#66E3FF" stroke-width="3" stroke-linecap="round"/>
+</svg>

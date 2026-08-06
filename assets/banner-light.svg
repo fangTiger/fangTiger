@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1200 360">
+  <title>CAPTAIN // FANGTIGER light control deck banner</title>
+  <desc>Light cyber captain control deck banner for an AI Web3 builder profile, using graphite, ice blue and Arc orange.</desc>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .sans { font-family: Inter, Arial, Helvetica, sans-serif; }
+    .scan { animation: scan 7s ease-in-out infinite; }
+    .pulse { animation: pulse 4s ease-in-out infinite; }
+    .orbit { animation: orbit 12s linear infinite; transform-origin: 210px 180px; }
+    @keyframes scan { 0%, 100% { transform: translateX(-34px); opacity: .24; } 50% { transform: translateX(34px); opacity: .58; } }
+    @keyframes pulse { 0%, 100% { opacity: .48; } 50% { opacity: 1; } }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+  </style>
+  <defs>
+    <linearGradient id="deckLight" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#F8FBFD"/>
+      <stop offset=".56" stop-color="#EEF5F8"/>
+      <stop offset="1" stop-color="#DDE8EE"/>
+    </linearGradient>
+    <linearGradient id="iceRailLight" x1="0" x2="1">
+      <stop offset="0" stop-color="#66E3FF" stop-opacity=".1"/>
+      <stop offset=".5" stop-color="#66E3FF"/>
+      <stop offset="1" stop-color="#66E3FF" stop-opacity=".12"/>
+    </linearGradient>
+    <filter id="softGlowLight" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" fill="url(#deckLight)"/>
+  <path d="M0 70H1200M0 145H1200M0 220H1200M0 295H1200M112 0V360M272 0V360M432 0V360M592 0V360M752 0V360M912 0V360M1072 0V360" stroke="#B9CAD6" stroke-width="1" opacity=".64"/>
+  <path d="M0 312L190 258L348 282L510 215L716 245L890 174L1200 205" fill="none" stroke="#0B7486" stroke-width="1.5" opacity=".38"/>
+  <path class="scan" d="M-24 24L224 0L1200 336V360L984 360Z" fill="#66E3FF" opacity=".12"/>
+  <path d="M0 40H342L388 82H1200" fill="none" stroke="#FF7A18" stroke-width="3" opacity=".9"/>
+  <path d="M0 322H418L480 278H1200" fill="none" stroke="#0B7486" stroke-width="2" opacity=".72"/>
+
+  <g transform="translate(70 40)">
+    <circle cx="140" cy="140" r="106" fill="#F8FBFD" stroke="#B9CAD6" stroke-width="2"/>
+    <circle cx="140" cy="140" r="88" fill="none" stroke="#0B7486" stroke-width="2" opacity=".58"/>
+    <g class="orbit">
+      <ellipse cx="140" cy="140" rx="111" ry="42" fill="none" stroke="#FF7A18" stroke-width="2" opacity=".74"/>
+      <circle cx="250" cy="140" r="5" fill="#66E3FF" filter="url(#softGlowLight)"/>
+    </g>
+    <path d="M86 82L108 40L140 76L172 40L194 82L178 164L140 210L102 164Z" fill="#FFFFFF" stroke="#0B0F14" stroke-width="3"/>
+    <path d="M108 92L140 66L172 92L162 148L140 176L118 148Z" fill="#FF7A18" opacity=".92"/>
+    <path d="M92 118L48 105L82 145M188 118L232 105L198 145" fill="none" stroke="#0B7486" stroke-width="5" stroke-linecap="round"/>
+    <path d="M118 120L97 112M162 120L183 112M124 145H156M132 160L140 176L148 160" fill="none" stroke="#0B0F14" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="pulse" d="M140 18V50M140 230V262M18 140H50M230 140H262" stroke="#0B7486" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(352 94)">
+    <text class="mono" x="0" y="0" fill="#0B7486" font-size="18">CONTROL DECK ONLINE</text>
+    <text class="sans" x="0" y="66" fill="#0B0F14" font-size="54" font-weight="800">CAPTAIN // FANGTIGER</text>
+    <text class="mono" x="0" y="112" fill="#C95704" font-size="26" font-weight="700">AI × WEB3 BUILDER</text>
+    <text class="sans" x="0" y="154" fill="#364653" font-size="22">Building intelligent agents, prediction systems and developer infrastructure.</text>
+    <g transform="translate(0 190)">
+      <rect x="0" y="0" width="174" height="40" rx="4" fill="#FFFFFF" stroke="#B9CAD6"/>
+      <text class="mono" x="18" y="26" fill="#0B0F14" font-size="15">Arc Builder</text>
+      <rect x="194" y="0" width="280" height="40" rx="4" fill="#FFFFFF" stroke="#B9CAD6"/>
+      <text class="mono" x="212" y="26" fill="#0B0F14" font-size="15">Binance AI Competition Winner</text>
+      <rect x="494" y="0" width="134" height="40" rx="4" fill="#FFFFFF" stroke="#B9CAD6"/>
+      <text class="mono" x="512" y="26" fill="#0B0F14" font-size="15">Hong Kong</text>
+    </g>
+  </g>
+
+  <g class="pulse" transform="translate(1035 42)">
+    <rect x="0" y="0" width="112" height="26" rx="4" fill="#FF7A18" opacity=".92"/>
+    <text class="mono" x="14" y="18" fill="#0B0F14" font-size="12" font-weight="800">MISSION LIVE</text>
+    <animate attributeName="opacity" values=".76;1;.76" dur="5s" repeatCount="indefinite"/>
+  </g>
+</svg>
