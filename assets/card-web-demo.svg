@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 760 300">
-  <title>web_demo project card</title>
-  <desc>Project card for web_demo, described as frontend website experiments for polished AI Web3 interfaces.</desc>
+  <title>web_demo 静态前端模板库</title>
+  <desc>面向开发者与 Agent 的静态前端模板库，提供用途分类、可浏览预览和机器可读目录。</desc>
   <style>
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .sans { font-family: Inter, Arial, Helvetica, sans-serif; }
+    .sans { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif; }
     .pulse { animation: pulse 4s ease-in-out infinite; }
     @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
   </style>
@@ -26,10 +26,10 @@
     <path class="pulse" d="M120 60H178M120 82H166M120 104H188" stroke="#66E3FF" stroke-width="5" stroke-linecap="round"/>
     <path d="M38 94L60 72L82 94" fill="none" stroke="#FF7A18" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <text class="mono" x="42" y="48" fill="#FF7A18" font-size="18">FRONTEND WEBSITE</text>
+  <text class="sans" x="42" y="48" fill="#FF7A18" font-size="18">前端模板 · 开发资源</text>
   <text class="sans" x="42" y="116" fill="#F4FBFF" font-size="46" font-weight="800">web_demo</text>
-  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">Polished AI × Web3</text>
-  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="24">interface experiments.</text>
+  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">可直接浏览的静态模板</text>
+  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="24">分类预览与机器可读目录</text>
   <rect x="42" y="222" width="250" height="34" rx="4" fill="#101820" stroke="#334252"/>
-  <text class="mono" x="60" y="244" fill="#66E3FF" font-size="15">frontend · product · demos</text>
+  <text class="mono" x="60" y="244" fill="#66E3FF" font-size="15">templates · catalog · demos</text>
 </svg>

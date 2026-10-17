@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 760 300">
-  <title>PredictArena project card</title>
-  <desc>Project card for PredictArena, focused on forecasting experiments and prediction-system workflows.</desc>
+  <title>PredictArena 智能体对决</title>
+  <desc>Arc 测试网智能体预测对决演示，使用 USDC 结算并记录公开收据与声誉。</desc>
   <style>
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .sans { font-family: Inter, Arial, Helvetica, sans-serif; }
+    .sans { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif; }
     .pulse { animation: pulse 4s ease-in-out infinite; }
     @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
   </style>
@@ -22,10 +22,10 @@
     <path d="M22 74H146M84 12V136" stroke="#66E3FF" stroke-width="3" stroke-linecap="round" opacity=".82"/>
     <circle class="pulse" cx="84" cy="74" r="18" fill="none" stroke="#66E3FF" stroke-width="4"/>
   </g>
-  <text class="mono" x="42" y="48" fill="#FF7A18" font-size="18">FORECASTING ARENA</text>
+  <text class="sans" x="42" y="48" fill="#FF7A18" font-size="18">智能体对决 · 测试网演示</text>
   <text class="sans" x="42" y="116" fill="#F4FBFF" font-size="46" font-weight="800">PredictArena</text>
-  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">Forecasting experiments and</text>
-  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="24">prediction-system workflows.</text>
+  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">预测分歧驱动链上对决</text>
+  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="24">公开收据与智能体声誉</text>
   <rect x="42" y="222" width="278" height="34" rx="4" fill="#101820" stroke="#334252"/>
-  <text class="mono" x="60" y="244" fill="#66E3FF" font-size="15">arena · forecasts · workflows</text>
+  <text class="mono" x="60" y="244" fill="#66E3FF" font-size="15">Arc · USDC · agents</text>
 </svg>

@@ -13,7 +13,8 @@ EXPECTED_ASSETS = {
     "assets/banner-light.svg",
     "assets/captain-mark.svg",
     "assets/card-arcpredict.svg",
-    "assets/card-captain-dock.svg",
+    "assets/card-arc-dungeon.svg",
+    "assets/card-giwa-intent.svg",
     "assets/card-llm-template.svg",
     "assets/card-predictarena.svg",
     "assets/card-web-demo.svg",
@@ -22,26 +23,25 @@ EXPECTED_ASSETS = {
 REQUIRED_README_TEXT = [
     "CAPTAIN // FANGTIGER",
     "AI × WEB3 BUILDER",
-    "Building intelligent agents, prediction systems and developer infrastructure.",
-    "CURRENT MISSION",
-    "Winner, Binance AI Competition",
+    "构建智能体、链上预测产品与可复用的 AI 开发工作流。",
+    "精选作品",
+    "Binance AI 竞赛获奖",
     "Arc Builder",
-    "Hong Kong",
+    "香港",
     "https://www.captain-dock.xyz/",
-    "FRONTEND WEBSITE",
     "web_demo",
-    "Large Model Template",
-    "Agent prompt, tool-call and workflow templates for reusable AI systems.",
+    "ai-config-templates",
     "https://www.linkedin.com/in/lao-shugen-0aa058349/",
     "https://x.com/mycndota",
 ]
 
 REQUIRED_REPOSITORIES = {
+    "ARC Dungeon": "https://github.com/fangTiger/Arc-Dungeon",
     "ArcPredict": "https://github.com/fangTiger/ArcPredict",
-    "captain-dock": "https://github.com/fangTiger/captain-dock",
+    "GiwaIntent": "https://github.com/fangTiger/giwa-intent",
     "PredictArena": "https://github.com/fangTiger/PredictArena",
     "web_demo": "https://github.com/fangTiger/web_demo",
-    "Large Model Template": "#large-model-template",
+    "ai-config-templates": "https://github.com/fangTiger/ai-config-templates",
 }
 
 FORBIDDEN_README_TOKENS = [
@@ -81,9 +81,49 @@ class ProfileReadmeTest(unittest.TestCase):
 
         self.assertIn("assets/banner-dark.svg", markdown)
         self.assertIn("assets/banner-light.svg", markdown)
-        self.assertIn("Personal command deck for AI × Web3 projects.", markdown)
         self.assertIn("assets/card-web-demo.svg", markdown)
         self.assertIn("assets/card-llm-template.svg", markdown)
+
+    def test_project_cards_link_to_public_repositories(self):
+        markdown = read_text(README)
+        expected_cards = {
+            "card-arc-dungeon.svg": "ARC Dungeon",
+            "card-arcpredict.svg": "ArcPredict",
+            "card-giwa-intent.svg": "GiwaIntent",
+            "card-predictarena.svg": "PredictArena",
+            "card-web-demo.svg": "web_demo",
+            "card-llm-template.svg": "ai-config-templates",
+        }
+        for card, project in expected_cards.items():
+            with self.subTest(project=project):
+                self.assertRegex(
+                    markdown,
+                    rf'<a href="{re.escape(REQUIRED_REPOSITORIES[project])}">\s*'
+                    rf'<img[^>]+src="assets/{re.escape(card)}"',
+                )
+        self.assertNotIn("https://github.com/fangTiger/captain-dock", markdown)
+        self.assertIn('<a id="large-model-template"></a>', markdown)
+
+    def test_project_summaries_explain_capabilities_and_stage(self):
+        markdown = read_text(README)
+        rows = {
+            project: next(
+                (line for line in markdown.splitlines() if line.startswith(f"| [{project}]")),
+                "",
+            )
+            for project in REQUIRED_REPOSITORIES
+        }
+        for project, terms in {
+            "ARC Dungeon": ("像素地牢", "职业战斗", "钱包", "战绩", "本地模拟", "Arc 测试网游戏原型", "真实钱包发布待验证", "代码待上传"),
+            "ArcPredict": ("AI Lens", "测试网原型"),
+            "GiwaIntent": ("付款请求", "GIWA Sepolia", "测试网 MVP"),
+            "PredictArena": ("智能体对决", "测试网演示"),
+            "web_demo": ("静态前端模板", "目录"),
+            "ai-config-templates": ("OpenSpec", "编码工作流"),
+        }.items():
+            for term in terms:
+                with self.subTest(project=project, term=term):
+                    self.assertIn(term, rows[project])
 
     def test_readme_uses_local_assets_without_dynamic_badges(self):
         self.assertTrue(README.exists(), "README.md should exist")
@@ -99,8 +139,8 @@ class ProfileReadmeTest(unittest.TestCase):
             self.assertNotIn(token, lowered)
 
     def test_svg_assets_are_accessible_static_and_described(self):
-        for relative in EXPECTED_ASSETS:
-            path = ROOT / relative
+        for path in ASSETS.glob("*.svg"):
+            relative = str(path.relative_to(ROOT))
             self.assertTrue(path.exists(), f"{relative} should exist")
             tree = ET.parse(path)
             root = tree.getroot()
@@ -122,7 +162,28 @@ class ProfileReadmeTest(unittest.TestCase):
                             f"{relative} must not reference remote resources",
                         )
 
+    def test_new_card_has_chinese_accessible_description(self):
+        for filename in ("card-giwa-intent.svg", "card-arc-dungeon.svg"):
+            with self.subTest(card=filename):
+                path = ASSETS / filename
+                self.assertTrue(path.exists(), f"缺少卡片：{filename}")
+                root = ET.parse(path).getroot()
+                for tag in ("title", "desc"):
+                    element = root.find(f"{{http://www.w3.org/2000/svg}}{tag}")
+                    self.assertIsNotNone(element)
+                    self.assertRegex(element.text or "", r"[\u4e00-\u9fff]")
+
+    def test_project_cards_form_two_rows_of_three(self):
+        groups = re.findall(r'<div align="center">(.*?)</div>', read_text(README), re.S)
+        rows = [group for group in groups if 'src="assets/card-' in group]
+        self.assertEqual(2, len(rows))
+        for row in rows:
+            cards = re.findall(r'<img[^>]+src="assets/card-[^"]+"[^>]+width="([^"]+)"', row)
+            self.assertEqual(["31%"] * 3, cards)
+
     def test_visual_assets_include_required_palette(self):
+        for relative in EXPECTED_ASSETS:
+            self.assertTrue((ROOT / relative).exists(), f"缺少本地资产：{relative}")
         combined = "\n".join(read_text(ROOT / relative) for relative in EXPECTED_ASSETS)
         self.assertIn("#66E3FF", combined)
         self.assertIn("#FF7A18", combined)

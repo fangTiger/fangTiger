@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 760 300">
-  <title>Large Model Template card</title>
-  <desc>Project card for large model templates, focused on agent prompts, tool calls and reusable AI workflows.</desc>
+  <title>AI Config Templates 编码工作流</title>
+  <desc>ai-config-templates 开发脚手架，提供 OpenSpec 规范驱动和 Claude、Codex、Gemini 协作模式。</desc>
   <style>
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .sans { font-family: Inter, Arial, Helvetica, sans-serif; }
+    .sans { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif; }
     .pulse { animation: pulse 4s ease-in-out infinite; }
     @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
   </style>
@@ -23,11 +23,10 @@
     <circle cx="148" cy="70" r="12" fill="#FF7A18"/>
     <path d="M136 70H160M148 58V82" stroke="#0B0F14" stroke-width="4" stroke-linecap="round"/>
   </g>
-  <text class="mono" x="42" y="48" fill="#FF7A18" font-size="18">LLM TEMPLATE</text>
-  <text class="sans" x="42" y="116" fill="#F4FBFF" font-size="44" font-weight="800">Large Model</text>
-  <text class="sans" x="42" y="158" fill="#F4FBFF" font-size="44" font-weight="800">Template</text>
-  <text class="sans" x="42" y="196" fill="#C4D4DF" font-size="23">Agent prompt, tool-call and</text>
-  <text class="sans" x="42" y="226" fill="#C4D4DF" font-size="23">workflow templates.</text>
-  <rect x="42" y="244" width="245" height="34" rx="4" fill="#101820" stroke="#334252"/>
-  <text class="mono" x="60" y="266" fill="#66E3FF" font-size="15">prompts · tools · workflows</text>
+  <text class="sans" x="42" y="48" fill="#FF7A18" font-size="18">AI 编码 · 工作流脚手架</text>
+  <text class="sans" x="42" y="110" fill="#F4FBFF" font-size="38" font-weight="800">AI Config Templates</text>
+  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">OpenSpec 规范驱动</text>
+  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="24">可切换的 AI 协作模式</text>
+  <rect x="42" y="222" width="300" height="34" rx="4" fill="#101820" stroke="#334252"/>
+  <text class="mono" x="60" y="244" fill="#66E3FF" font-size="15">Claude · Codex · Gemini</text>
 </svg>
