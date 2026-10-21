@@ -22,6 +22,24 @@
   </p>
 </div>
 
+### 近期上线 · Arc 主网
+
+两款产品均已在 Arc 主网上线：从三易解读到像素悬赏挑战，以 USDC 连接体验与链上结算。
+
+<p align="center">
+  <a href="https://github.com/fangTiger/yarrow">
+    <img src="assets/card-yarrow.svg" alt="Yarrow · 三易：三流派解读与可复算起卦，Arc 主网已上线" width="48%">
+  </a>
+  <a href="https://github.com/fangTiger/bounty-dungeon">
+    <img src="assets/card-bounty-dungeon.svg" alt="Bounty Dungeon：像素挑战与 USDC 悬赏，Arc 主网已上线" width="48%">
+  </a>
+</p>
+
+| 产品 | 简介 | 体验 / 源码 |
+| --- | --- | --- |
+| Yarrow · 三易 | 易经、八字与起名解读，三流派交叉解读，支持 USDC 支付；易经以 Arc 区块哈希起卦，可在浏览器复算验证。 | [体验](https://yarrow-six.vercel.app) · [源码](https://github.com/fangTiger/yarrow) |
+| Bounty Dungeon | 同一种子的像素 roguelike 挑战：玩家发起 USDC 悬赏，24 小时内首位超分者由合约领取奖金，无人超分到期可退；成绩由服务器重放验证并签名，合约托管结算。 | [体验](https://bounty-dungeon.vercel.app) · [源码](https://github.com/fangTiger/bounty-dungeon) |
+
 ### 精选作品
 
 从预测市场、智能体对决、链上付款请求到像素地牢游戏，把 AI × Web3 想法做成可检查的产品原型；同时整理前端模板和 AI 编码工作流，复用开发过程中的经验。

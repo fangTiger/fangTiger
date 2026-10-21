@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 760 300">
+  <title>Bounty Dungeon 像素悬赏 · Arc 主网产品</title>
+  <desc>同一种子的像素地牢挑战，玩家发起 USDC 悬赏，24 小时内首位超分者获得奖金；成绩由服务器重放验证并签名，合约托管结算。右侧为像素宝箱与剑。</desc>
+  <style>
+    .sans { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="cardBounty" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0B0F14"/>
+      <stop offset=".7" stop-color="#141C24"/>
+      <stop offset="1" stop-color="#1A2028"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="744" height="284" rx="8" fill="url(#cardBounty)" stroke="#2A3542" stroke-width="2"/>
+  <path d="M32 62H728M32 274H728" stroke="#2A3542"/>
+  <g transform="translate(532 85)" shape-rendering="crispEdges">
+    <path d="M0 146H170M16 158H154" stroke="#334252" stroke-width="4"/>
+    <path d="M4 130V70H16V54H96V70H108V130Z" fill="#101820" stroke="#66E3FF" stroke-width="6"/>
+    <path d="M7 88H105M28 57V127M84 57V127" fill="none" stroke="#334252" stroke-width="6"/>
+    <path d="M7 85H105" stroke="#66E3FF" stroke-width="6"/>
+    <path d="M46 78H66V100H46Z" fill="#FF7A18"/>
+    <path d="M54 84H60V94H54Z" fill="#101820"/>
+    <g transform="translate(88 0)">
+      <path d="M40 0H58V54H48V64H30V54H40Z" fill="#66E3FF"/>
+      <path d="M48 8V48" stroke="#C4D4DF" stroke-width="4"/>
+      <path d="M18 62H68V72H18ZM38 72H50V100H38ZM32 100H56V110H32Z" fill="#FF7A18"/>
+    </g>
+    <rect x="4" y="24" width="7" height="7" fill="#FF7A18"/>
+    <rect x="162" y="104" width="7" height="7" fill="#66E3FF"/>
+  </g>
+  <text class="sans" x="42" y="48" fill="#FF7A18" font-size="18">像素挑战 · 合约托管悬赏</text>
+  <text class="sans" x="42" y="116" fill="#F4FBFF" font-size="40" font-weight="800">Bounty Dungeon</text>
+  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">USDC 悬赏 · 同种子挑战</text>
+  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="24">24 小时超分争夺奖金</text>
+  <rect x="42" y="222" width="286" height="34" rx="4" fill="#101820" stroke="#334252"/>
+  <circle cx="60" cy="239" r="4" fill="#FF7A18"/>
+  <text class="sans" x="75" y="245" fill="#66E3FF" font-size="16">Arc 主网已上线 · USDC</text>
+</svg>

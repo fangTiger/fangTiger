@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 760 300">
+  <title>Yarrow 三易 · Arc 主网产品</title>
+  <desc>易经、八字与起名的三流派交叉解读，支持 USDC 支付；易经使用 Arc 区块哈希起卦，可在浏览器复算验证。右侧六爻卦象沿轨道排列。</desc>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .sans { font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", Arial, sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="cardYarrow" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0B0F14"/>
+      <stop offset=".7" stop-color="#141C24"/>
+      <stop offset="1" stop-color="#1A2028"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="744" height="284" rx="8" fill="url(#cardYarrow)" stroke="#2A3542" stroke-width="2"/>
+  <path d="M32 62H728M32 274H728" stroke="#2A3542"/>
+  <g transform="translate(608 157)">
+    <circle r="85" fill="none" stroke="#334252"/>
+    <circle r="70" fill="none" stroke="#2A3542" stroke-dasharray="3 9"/>
+    <path d="M-94 0H-77M77 0H94M0-94V-77M0 77V94" stroke="#334252" stroke-width="2"/>
+    <g fill="#66E3FF">
+      <rect x="-42" y="-53" width="84" height="8" rx="1"/>
+      <path d="M-42-33H-8V-25H-42ZM8-33H42V-25H8Z"/>
+      <rect x="-42" y="-13" width="84" height="8" rx="1"/>
+      <path d="M-42 7H-8V15H-42ZM8 7H42V15H8Z"/>
+      <path d="M-42 27H-8V35H-42ZM8 27H42V35H8Z"/>
+      <rect x="-42" y="47" width="84" height="8" rx="1"/>
+    </g>
+    <circle cx="61" cy="-60" r="5" fill="#FF7A18"/>
+    <circle cx="-61" cy="60" r="3" fill="#66E3FF"/>
+  </g>
+  <text class="sans" x="42" y="48" fill="#FF7A18" font-size="18">三易解读 · 可复算起卦</text>
+  <text class="sans" x="42" y="116" fill="#F4FBFF" font-size="44" font-weight="800">Yarrow · 三易</text>
+  <text class="sans" x="42" y="158" fill="#C4D4DF" font-size="24">易经 · 八字 · 起名</text>
+  <text class="sans" x="42" y="190" fill="#C4D4DF" font-size="23">三流派交叉解读，USDC 支付</text>
+  <rect x="42" y="222" width="286" height="34" rx="4" fill="#101820" stroke="#334252"/>
+  <circle cx="60" cy="239" r="4" fill="#FF7A18"/>
+  <text class="sans" x="75" y="245" fill="#66E3FF" font-size="16">Arc 主网已上线 · USDC</text>
+</svg>

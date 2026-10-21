@@ -18,6 +18,8 @@ EXPECTED_ASSETS = {
     "assets/card-llm-template.svg",
     "assets/card-predictarena.svg",
     "assets/card-web-demo.svg",
+    "assets/card-yarrow.svg",
+    "assets/card-bounty-dungeon.svg",
 }
 
 REQUIRED_README_TEXT = [
@@ -103,6 +105,40 @@ class ProfileReadmeTest(unittest.TestCase):
                 )
         self.assertNotIn("https://github.com/fangTiger/captain-dock", markdown)
         self.assertIn('<a id="large-model-template"></a>', markdown)
+
+    def test_recent_mainnet_showcase_precedes_existing_featured_projects(self):
+        markdown = read_text(README)
+        heading = "### 近期上线 · Arc 主网"
+        self.assertIn(heading, markdown)
+        recent = markdown.split(heading, 1)[1].split("### 精选作品", 1)[0]
+        self.assertLess(markdown.index(heading), markdown.index("### 精选作品"))
+        self.assertIn("Arc 主网已上线", recent)
+        cards = re.findall(r'<p align="center">(.*?)</p>', recent, re.S)
+        self.assertEqual(1, len(cards))
+        for repository, asset, demo in (
+            ("yarrow", "card-yarrow.svg", "https://yarrow-six.vercel.app"),
+            ("bounty-dungeon", "card-bounty-dungeon.svg", "https://bounty-dungeon.vercel.app"),
+        ):
+            with self.subTest(repository=repository):
+                self.assertRegex(
+                    cards[0],
+                    rf'<a href="https://github.com/fangTiger/{repository}">\s*'
+                    rf'<img[^>]+src="assets/{asset}"[^>]+width="48%"\s*>\s*</a>',
+                )
+                self.assertIn(demo, recent)
+                root = ET.parse(ASSETS / asset).getroot()
+                self.assertEqual("0 0 760 300", root.attrib.get("viewBox"))
+                for tag in ("title", "desc"):
+                    element = root.find(f"{{http://www.w3.org/2000/svg}}{tag}")
+                    self.assertIsNotNone(element)
+                    self.assertRegex(element.text or "", r"[\u4e00-\u9fff]")
+        self.assertIn("Yarrow · 三易", recent)
+        self.assertIn("Bounty Dungeon", recent)
+        for term in ("三流派", "USDC", "区块哈希", "复算", "24 小时", "首位超分者", "服务器重放验证", "合约托管"):
+            self.assertIn(term, recent)
+        legacy_row = next(line for line in markdown.splitlines() if line.startswith("| [ARC Dungeon]"))
+        self.assertIn("https://github.com/fangTiger/Arc-Dungeon", legacy_row)
+        self.assertIn("Arc 测试网游戏原型", legacy_row)
 
     def test_project_summaries_explain_capabilities_and_stage(self):
         markdown = read_text(README)
