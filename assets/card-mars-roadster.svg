@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 360">
   <title id="title">Mars Roadster · 最新实时 3D 驾驶作品</title>
-  <desc id="desc">红色推进器超跑驶向星际地平线。实时 3D 驾驶、加速升空与多视角镜头，点击进入浏览器体验。</desc>
+  <desc id="desc">红色推进器超跑从沙漠公路驶向太空轨道。实时 3D 驾驶、推进器升空、空中翻滚与轨道再入，点击进入浏览器体验。</desc>
   <defs>
     <linearGradient id="bg" x2="1" y2=".8">
       <stop stop-color="#0B0F14"/>
@@ -67,8 +67,8 @@
     <text x="1150" y="39" text-anchor="end" fill="#7893A4" font-family="Menlo,Consolas,monospace" font-size="12" letter-spacing="2">BUILT TO LIFT OFF</text>
     <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
       <text x="48" y="132" fill="#F4FBFF" font-size="62" font-weight="800" letter-spacing="-2">Mars Roadster</text>
-      <text x="50" y="181" fill="#66E3FF" font-size="26">离地 · 推进器超跑 · 实时 3D</text>
-      <text x="50" y="220" fill="#C4D4DF" font-size="21">驾驶、升空，切换镜头，冲出大气层。</text>
+      <text x="50" y="181" fill="#66E3FF" font-size="26">沙漠公路 → 太空轨道</text>
+      <text x="50" y="220" fill="#C4D4DF" font-size="21">推进器升空 · 空中翻滚 · 轨道再入</text>
     </g>
     <rect x="48" y="266" width="234" height="43" rx="5" fill="#FF7A18"/>
     <text x="69" y="293" fill="#0B0F14" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="700">PLAY IN BROWSER ↗</text>

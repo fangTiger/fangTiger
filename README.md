@@ -30,7 +30,7 @@
   </a>
 </p>
 
-**[Mars Roadster · 立即体验 ↗](https://mars-roadster.vercel.app/)** — 实时 3D 推进器超跑体验：驾驶、加速与升空，切换多视角镜头，感受冲出大气层的速度。Built with Arc Studio + Claude Code。
+**[新作 · Mars Roadster · 立即驾驶 ↗](https://mars-roadster.vercel.app/)** — 从沙漠公路开进太空的实时 3D 驾驶游戏：推进器升空、空中翻滚、轨道再入，自由切换驾驶镜头。Built with Arc Studio + Claude Code。
 
 ### 近期上线 · Arc 主网
 
@@ -52,26 +52,23 @@
 
 ### 精选作品
 
-从预测市场、智能体对决、链上付款请求到像素地牢游戏，把 AI × Web3 想法做成可检查的产品原型；同时整理前端模板和 AI 编码工作流，复用开发过程中的经验。
+从预测市场、智能体对决到像素地牢游戏，把 AI × Web3 想法做成可检查的产品原型；同时整理前端模板和 AI 编码工作流，复用开发过程中的经验。
 
 <div align="center">
   <a href="https://github.com/fangTiger/ArcPredict">
     <img src="assets/card-arcpredict.svg" alt="ArcPredict：预测市场与 AI Lens 概率参考" width="31%">
   </a>
-  <a href="https://github.com/fangTiger/giwa-intent">
-    <img src="assets/card-giwa-intent.svg" alt="GiwaIntent：可验证的链上付款请求" width="31%">
-  </a>
   <a href="https://github.com/fangTiger/PredictArena">
     <img src="assets/card-predictarena.svg" alt="PredictArena：智能体对决与链上结算" width="31%">
+  </a>
+  <a href="https://github.com/fangTiger/Arc-Dungeon">
+    <img src="assets/card-arc-dungeon.svg" alt="ARC Dungeon：像素地牢与 Arc 测试网战绩" width="31%">
   </a>
 </div>
 
 <br>
 
 <div align="center">
-  <a href="https://github.com/fangTiger/Arc-Dungeon">
-    <img src="assets/card-arc-dungeon.svg" alt="ARC Dungeon：像素地牢与 Arc 测试网战绩" width="31%">
-  </a>
   <a href="https://github.com/fangTiger/web_demo">
     <img src="assets/card-web-demo.svg" alt="web_demo：静态前端模板与可浏览目录" width="31%">
   </a>
@@ -83,7 +80,6 @@
 | 项目 | 做什么 | 当前阶段 |
 | --- | --- | --- |
 | [ArcPredict](https://github.com/fangTiger/ArcPredict) | 加密价格与事件预测市场，结合 AI Lens 概率参考、数据源插件和运营工具。 | Arc 测试网原型 |
-| [GiwaIntent](https://github.com/fangTiger/giwa-intent) | 将身份、金额、用途与有效期绑定为可验证的付款请求，提供链上收据与关联退款。 | GIWA Sepolia 测试网 MVP；合约已部署，完整实钱包验证待完成 |
 | [PredictArena](https://github.com/fangTiger/PredictArena) | 让预测方向相反的智能体对决，以 USDC 链上结算并记录收据与声誉。 | Arc 测试网演示 |
 | [ARC Dungeon](https://github.com/fangTiger/Arc-Dungeon) | 像素地牢探索与职业战斗，连接 EVM 钱包并发布测试网战绩；奖励、门票和皮肤为本地模拟资产。 | Arc 测试网游戏原型；真实钱包发布待验证，仓库代码待上传 |
 | [web_demo](https://github.com/fangTiger/web_demo) | 面向开发者与 Agent 的静态前端模板库，提供用途分类、可浏览预览与机器可读目录。 | 静态模板库 |

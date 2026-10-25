@@ -14,7 +14,6 @@ EXPECTED_ASSETS = {
     "assets/captain-mark.svg",
     "assets/card-arcpredict.svg",
     "assets/card-arc-dungeon.svg",
-    "assets/card-giwa-intent.svg",
     "assets/card-llm-template.svg",
     "assets/card-predictarena.svg",
     "assets/card-web-demo.svg",
@@ -28,6 +27,11 @@ REQUIRED_README_TEXT = [
     "AI × WEB3 BUILDER",
     "构建智能体、链上预测产品与可复用的 AI 开发工作流。",
     "精选作品",
+    "新作 · Mars Roadster",
+    "https://mars-roadster.vercel.app/",
+    "推进器升空",
+    "空中翻滚",
+    "轨道再入",
     "Binance AI 竞赛获奖",
     "Arc Builder",
     "香港",
@@ -41,7 +45,6 @@ REQUIRED_README_TEXT = [
 REQUIRED_REPOSITORIES = {
     "ARC Dungeon": "https://github.com/fangTiger/Arc-Dungeon",
     "ArcPredict": "https://github.com/fangTiger/ArcPredict",
-    "GiwaIntent": "https://github.com/fangTiger/giwa-intent",
     "PredictArena": "https://github.com/fangTiger/PredictArena",
     "web_demo": "https://github.com/fangTiger/web_demo",
     "ai-config-templates": "https://github.com/fangTiger/ai-config-templates",
@@ -106,7 +109,6 @@ class ProfileReadmeTest(unittest.TestCase):
         expected_cards = {
             "card-arc-dungeon.svg": "ARC Dungeon",
             "card-arcpredict.svg": "ArcPredict",
-            "card-giwa-intent.svg": "GiwaIntent",
             "card-predictarena.svg": "PredictArena",
             "card-web-demo.svg": "web_demo",
             "card-llm-template.svg": "ai-config-templates",
@@ -167,7 +169,6 @@ class ProfileReadmeTest(unittest.TestCase):
         for project, terms in {
             "ARC Dungeon": ("像素地牢", "职业战斗", "钱包", "战绩", "本地模拟", "Arc 测试网游戏原型", "真实钱包发布待验证", "代码待上传"),
             "ArcPredict": ("AI Lens", "测试网原型"),
-            "GiwaIntent": ("付款请求", "GIWA Sepolia", "测试网 MVP"),
             "PredictArena": ("智能体对决", "测试网演示"),
             "web_demo": ("静态前端模板", "目录"),
             "ai-config-templates": ("OpenSpec", "编码工作流"),
@@ -224,13 +225,18 @@ class ProfileReadmeTest(unittest.TestCase):
                     self.assertIsNotNone(element)
                     self.assertRegex(element.text or "", r"[\u4e00-\u9fff]")
 
-    def test_project_cards_form_two_rows_of_three(self):
+    def test_readme_omits_giwa_showcase(self):
+        markdown = read_text(README)
+        self.assertNotIn("giwa", markdown.lower())
+        self.assertNotIn("链上付款请求", markdown)
+
+    def test_project_cards_form_rows_of_three_and_two(self):
         groups = re.findall(r'<div align="center">(.*?)</div>', read_text(README), re.S)
         rows = [group for group in groups if 'src="assets/card-' in group]
         self.assertEqual(2, len(rows))
-        for row in rows:
+        for row, count in zip(rows, (3, 2)):
             cards = re.findall(r'<img[^>]+src="assets/card-[^"]+"[^>]+width="([^"]+)"', row)
-            self.assertEqual(["31%"] * 3, cards)
+            self.assertEqual(["31%"] * count, cards)
 
     def test_visual_assets_include_required_palette(self):
         for relative in EXPECTED_ASSETS:
