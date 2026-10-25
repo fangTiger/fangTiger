@@ -20,6 +20,7 @@ EXPECTED_ASSETS = {
     "assets/card-web-demo.svg",
     "assets/card-yarrow.svg",
     "assets/card-bounty-dungeon.svg",
+    "assets/card-mars-roadster.svg",
 }
 
 REQUIRED_README_TEXT = [
@@ -70,6 +71,20 @@ def local_asset_references(markdown: str) -> set[str]:
 
 
 class ProfileReadmeTest(unittest.TestCase):
+    def test_mars_roadster_is_first_work_without_network_label(self):
+        markdown = read_text(README)
+        first_card = re.search(r'<img[^>]+src="(assets/card-[^"]+)"', markdown)
+        self.assertIsNotNone(first_card)
+        self.assertEqual("assets/card-mars-roadster.svg", first_card.group(1))
+        section = markdown.split("### 最新作品", 1)[1].split("### 近期上线 · Arc 主网", 1)[0]
+        self.assertRegex(section, r'<a href="https://mars-roadster\.vercel\.app/">\s*<img[^>]+src="assets/card-mars-roadster\.svg"')
+        self.assertIn("实时 3D", section)
+        self.assertNotRegex(section, r"主网|测试网|USDC|Mainnet|Testnet")
+        root = ET.parse(ASSETS / "card-mars-roadster.svg").getroot()
+        text = " ".join(root.itertext())
+        self.assertIn("Mars Roadster", text)
+        self.assertNotRegex(text, r"主网|测试网|USDC|Mainnet|Testnet")
+
     def test_readme_includes_brand_identity_and_repository_links(self):
         self.assertTrue(README.exists(), "README.md should exist")
         markdown = read_text(README)

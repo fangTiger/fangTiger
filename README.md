@@ -22,6 +22,16 @@
   </p>
 </div>
 
+### 最新作品
+
+<p align="center">
+  <a href="https://mars-roadster.vercel.app/">
+    <img src="assets/card-mars-roadster.svg" alt="Mars Roadster：实时 3D 推进器超跑，驾驶、升空与多视角镜头" width="100%">
+  </a>
+</p>
+
+**[Mars Roadster · 立即体验 ↗](https://mars-roadster.vercel.app/)** — 实时 3D 推进器超跑体验：驾驶、加速与升空，切换多视角镜头，感受冲出大气层的速度。Built with Arc Studio + Claude Code。
+
 ### 近期上线 · Arc 主网
 
 两款产品均已在 Arc 主网上线：从三易解读到像素悬赏挑战，以 USDC 连接体验与链上结算。

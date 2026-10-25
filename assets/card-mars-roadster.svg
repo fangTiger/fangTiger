@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 360">
+  <title id="title">Mars Roadster · 最新实时 3D 驾驶作品</title>
+  <desc id="desc">红色推进器超跑驶向星际地平线。实时 3D 驾驶、加速升空与多视角镜头，点击进入浏览器体验。</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2=".8">
+      <stop stop-color="#0B0F14"/>
+      <stop offset="1" stop-color="#18222D"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop stop-color="#FF7A18" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#FF7A18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="body" x2="0" y2="1">
+      <stop stop-color="#FF8069"/>
+      <stop offset=".45" stop-color="#F34132"/>
+      <stop offset="1" stop-color="#8F2426"/>
+    </linearGradient>
+    <linearGradient id="glass" x2=".5" y2="1">
+      <stop stop-color="#A3EEFF"/>
+      <stop offset="1" stop-color="#16394D"/>
+    </linearGradient>
+    <linearGradient id="jet">
+      <stop stop-color="#F4FBFF"/>
+      <stop offset=".22" stop-color="#66E3FF"/>
+      <stop offset="1" stop-color="#66E3FF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="bounds"><rect x="2" y="2" width="1196" height="356" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#bounds)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <ellipse cx="975" cy="146" rx="270" ry="210" fill="url(#halo)"/>
+    <g fill="none" stroke="#334252" opacity=".55">
+      <path d="M654 277H1200M696 300H1200M624 336H1200M925 250L711 360M925 250L914 360M925 250L1120 360"/>
+      <circle cx="1001" cy="121" r="77"/>
+      <path d="M991 121H1011M1001 111V131M924 121H930M1072 121H1078M1001 44V50"/>
+    </g>
+    <g fill="#C4D4DF">
+      <circle cx="736" cy="65" r="1.5"/><circle cx="1140" cy="73" r="1"/>
+      <circle cx="1115" cy="162" r="1.5"/><circle cx="845" cy="103" r="1"/>
+    </g>
+    <path d="M699 238L1128 167" stroke="#66E3FF" opacity=".18"/>
+    <path d="M729 266L1131 208" stroke="#FF7A18" opacity=".3"/>
+    <g transform="translate(711 154) rotate(-9 190 70)">
+      <path d="M317 89L498 64L339 111Z" fill="url(#jet)"/>
+      <path d="M313 95L434 86L329 103Z" fill="#F4FBFF" opacity=".8"/>
+      <ellipse cx="169" cy="133" rx="162" ry="10" fill="#000" opacity=".28"/>
+      <circle cx="65" cy="108" r="31" fill="#080C12" stroke="#334252" stroke-width="3"/>
+      <circle cx="268" cy="108" r="31" fill="#080C12" stroke="#334252" stroke-width="3"/>
+      <g fill="#101820" stroke="#66E3FF" stroke-width="3">
+        <circle cx="65" cy="108" r="17"/><circle cx="268" cy="108" r="17"/>
+      </g>
+      <g stroke="#4F7284" stroke-width="2">
+        <path d="M65 94V122M51 108H79M268 94V122M254 108H282"/>
+      </g>
+      <path d="M3 89L28 70L110 59L158 24L223 26L275 60L316 70L337 94L318 113H304C305 65 230 63 231 113H104C105 65 27 63 28 113H9Z" fill="url(#body)" stroke="#FF9074" stroke-width="1.5"/>
+      <path d="M122 58L164 31L190 32L191 59ZM200 33L218 33L257 60L202 59Z" fill="url(#glass)" stroke="#18222D" stroke-width="2"/>
+      <path d="M12 88L117 77L218 78L317 87" fill="none" stroke="#FFB199" stroke-width="2"/>
+      <path d="M115 66V99H218L228 69M129 76H146" fill="none" stroke="#912B2E" stroke-width="2"/>
+      <path d="M15 90L36 86M297 81L317 87" stroke="#E2FAFF" stroke-width="5"/>
+      <path d="M10 104H26M107 109H224M306 106H323" stroke="#18222D" stroke-width="5"/>
+      <path d="M275 58L310 54L319 60H280" fill="#17212A"/>
+      <rect x="317" y="87" width="18" height="18" rx="3" fill="#17212A" stroke="#66E3FF"/>
+      <path d="M333 90V102" stroke="#F4FBFF" stroke-width="3"/>
+    </g>
+    <path d="M42 57H1158" stroke="#2A3542"/>
+    <text x="48" y="39" fill="#FF7A18" font-family="Menlo,Consolas,monospace" font-size="14" letter-spacing="2">LATEST CREATION / 01</text>
+    <text x="1150" y="39" text-anchor="end" fill="#7893A4" font-family="Menlo,Consolas,monospace" font-size="12" letter-spacing="2">BUILT TO LIFT OFF</text>
+    <g font-family="system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <text x="48" y="132" fill="#F4FBFF" font-size="62" font-weight="800" letter-spacing="-2">Mars Roadster</text>
+      <text x="50" y="181" fill="#66E3FF" font-size="26">离地 · 推进器超跑 · 实时 3D</text>
+      <text x="50" y="220" fill="#C4D4DF" font-size="21">驾驶、升空，切换镜头，冲出大气层。</text>
+    </g>
+    <rect x="48" y="266" width="234" height="43" rx="5" fill="#FF7A18"/>
+    <text x="69" y="293" fill="#0B0F14" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="700">PLAY IN BROWSER ↗</text>
+    <text x="305" y="293" fill="#7893A4" font-family="Menlo,Consolas,monospace" font-size="13">DRIVE / BOOST / EXPLORE</text>
+  </g>
+  <rect x="2" y="2" width="1196" height="356" rx="12" fill="none" stroke="#334252" stroke-width="2"/>
+</svg>
